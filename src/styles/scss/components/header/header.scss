@@ -1,14 +1,45 @@
+@use "sass:map";
 .header {
   
+  &__top {
+    top: 0;
+    right: 14px;
+  }
   
+  .nav-item a {
+    font-size: map-get($font-sizes, "sm");
+  }
   
-  &__dot-after {
+  &__contact,&__address a {
+    font-size: map-get($font-sizes, "sm");
+  }
+  
+  &__socials i {
+    font-size: map-get($font-sizes, "lg");
+  }
+  
+  &__dot-after:after {
     content: "";
     width: 6px;
     height: 6px;
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
-    margin: 0 3px;
+  }
+  
+  &__lang-switcher {
+    
+    span {
+      cursor: pointer;
+      font-size: map-get($font-sizes, "fs12");
+      border-radius: 8px;
+      line-height: map-get($font-sizes, "sm");
+      display: inline-block;
+      padding: 5px 7px;
+    }
+    
+    input:checked + span {
+      background-color: map-get($colors, "accent-color");
+    }
   }
 }

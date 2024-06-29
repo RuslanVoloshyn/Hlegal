@@ -1,0 +1,39 @@
+.header {
+  @media (max-width: 768px) {
+    &__menu {
+      position: absolute;
+      top: 30px;
+      left: 12px;
+      justify-content: start !important;
+    }
+
+    &__top {
+      width: 100%;
+      top: -50px;
+      left: 2px;
+      padding: 10px 0;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 60px;
+    &__top {
+      width: 100%;
+      top: -60px;
+      left: 0;
+      padding: 17px 15px 10px 15px;
+      background-color: #F5F5FA33;
+      justify-content: space-between !important;
+    }
+
+    &__address, &__socials {
+      display: none !important;
+    }
+
+    &__dot-after:after {
+      display: none;
+    }
+  }
+
+
+}

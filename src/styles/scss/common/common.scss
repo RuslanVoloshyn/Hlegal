@@ -1,5 +1,11 @@
 @use "sass:map";
 
 body {
-  font-family: $font-families;
+  font-family: $main-font-family;
+  font-size: map-get($font-sizes, "md");
+  color: map-get($colors, "white");
+}
+
+.gradient-bg {
+  background: map-get($colors, "supersoft-accent-gradient");
 }
