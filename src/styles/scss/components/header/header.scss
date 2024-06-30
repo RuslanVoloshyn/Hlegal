@@ -1,21 +1,37 @@
 @use "sass:map";
 .header {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+
+  .navbar-toggler {
+    color: map-get($colors, "white");
+    border-color: map-get($colors, "white");
+  }
   
   &__top {
     top: 0;
     right: 14px;
   }
+
+  .navbar-nav {
+    margin-top: 30px;
+  }
   
   .nav-item a {
     font-size: map-get($font-sizes, "sm");
+    color: map-get($colors, "white");
   }
   
-  &__contact,&__address a {
+  &__contact a,&__address a {
     font-size: map-get($font-sizes, "sm");
+    color: map-get($colors, "white");
   }
   
   &__socials i {
     font-size: map-get($font-sizes, "lg");
+    color: map-get($colors, "white");
   }
   
   &__dot-after:after {

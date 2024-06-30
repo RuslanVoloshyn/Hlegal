@@ -1,5 +1,7 @@
 .header {
   @media (max-width: 768px) {
+    top: 30px;
+    
     &__menu {
       position: absolute;
       top: 30px;
@@ -13,16 +15,26 @@
       left: 2px;
       padding: 10px 0;
     }
+
+    .navbar-nav {
+      margin-top: 60px;
+    }
   }
 
   @media (max-width: 576px) {
     padding-top: 60px;
+
+    &__menu {
+      background-color: #37196a;
+      margin-top: 0;
+    }
+    
     &__top {
       width: 100%;
       top: -60px;
       left: 0;
       padding: 17px 15px 10px 15px;
-      background-color: #F5F5FA33;
+      background-color: map-get($colors, "menu-bg");
       justify-content: space-between !important;
     }
 
@@ -33,6 +45,12 @@
     &__dot-after:after {
       display: none;
     }
+
+    .navbar-nav {
+      margin-top: 40px;
+      padding: 10px;
+    }
+    
   }
 
 

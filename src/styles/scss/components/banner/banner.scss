@@ -1,0 +1,48 @@
+.banner {
+  height: 100vh;
+  min-height: 400px;
+  max-height: 1280px;
+  background-image: url($base-assets-path + "images/svg/h.svg");
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: contain;
+  position: relative;
+  
+  &__title {
+    font-size: map-get($font-sizes, "xxl");
+    font-weight: bold;
+  }
+  
+  &__controls {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    
+    .btn:hover {
+      color: map-get($colors, "accent-color");
+      border-color: map-get($colors, "accent-color");
+    }
+    
+    a {
+      width: 42px;
+      height: 42px;
+      position: relative;
+      display: inline-block;
+      border: 1px solid map-get($colors, "white");
+      border-radius: 50%;
+      color: map-get($colors, "white");
+      font-size: map-get($font-sizes, "lg");
+      
+      i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -43%);
+      }
+
+      
+    }
+  }
+  
+
+}
