@@ -1,0 +1,33 @@
+.section__header {
+  padding-bottom: 500px;
+
+  &-link {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: map-get($font-sizes, "sm");
+    line-height: map-get($font-sizes, "sm");
+    text-decoration: none;
+    letter-spacing: 1px;
+    color: map-get($colors, "blue");
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: 0.3s color;
+
+    &:after {
+      @extend %boostrap-icons-base;
+      content: "\f285";
+      font-weight: bold;
+    }
+    
+    &:hover {
+      color: map-get($colors, "accent-color");
+    }
+  }
+
+  &-title {
+    @include tex-gradient(map-get($colors, "title-gradient"));
+    font-size: map-get($font-sizes, "xxl");
+    font-weight: bold;
+    line-height: map-get($font-sizes, "xxl");
+  }
+}
