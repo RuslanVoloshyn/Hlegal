@@ -34,14 +34,7 @@
     color: map-get($colors, "white");
   }
   
-  &__dot-after:after {
-    content: "";
-    width: 6px;
-    height: 6px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-  }
+  
   
   &__lang-switcher {
     

@@ -1,5 +1,5 @@
 .section__header {
-  padding-bottom: 500px;
+  margin-bottom: 30px;
 
   &-link {
     text-transform: uppercase;
@@ -18,7 +18,7 @@
       content: "\f285";
       font-weight: bold;
     }
-    
+
     &:hover {
       color: map-get($colors, "accent-color");
     }

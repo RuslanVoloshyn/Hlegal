@@ -1,0 +1,54 @@
+.footer {
+  padding-bottom: 30px;
+  background-color: map-get($colors, "gray-bg");
+
+  .dot-after:after {
+    background-color: map-get($colors, "gray");
+    margin: 3px 6px;
+  }
+
+  a {
+    color: map-get($colors, "blue");
+    text-decoration: none;
+    font-weight: bold;
+    font-size: map-get($font-sizes, "sm");
+    line-height: map-get($font-sizes, "sm");
+  }
+
+  .container {
+    &:before {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: map-get($colors, "light-gray");
+      margin-bottom: 30px;
+    }
+  }
+
+  &__address, &__copyright {
+    margin-bottom: 20px;
+  }
+
+  &__address {
+    font-size: map-get($font-sizes, "sm");
+    color: map-get($colors, "electric");
+
+    a {
+      text-transform: uppercase;
+    }
+  }
+
+  &__copyright {
+    color: map-get($colors, "gray");
+    line-height: map-get($font-sizes, "sm");
+  }
+
+  &__social a {
+    font-size: map-get($font-sizes, "lg");
+  }
+
+  &__phone a {
+    color: map-get($colors, "dark-gray");
+  }
+}
