@@ -1,15 +1,53 @@
 @use "sass:map";
+
 .header {
   position: absolute;
   top: 0;
   z-index: 1;
   width: 100%;
 
+  &.header-light {
+    position: static;
+    margin-bottom: 40px;
+
+    .header__lang-switcher {
+      span {
+        color: map-get($colors, "gray");
+      }
+
+      input:checked + span {
+        color: map-get($colors, "white");
+      }
+
+    }
+
+    .header__contact a, .header__address a, .header__socials i {
+      color: map-get($colors, "gray");
+
+      &:hover {
+        color: map-get($colors, "blue");
+      }
+    }
+
+    .dot-after:after {
+      background-color: map-get($colors, "gray");
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      color: map-get($colors, "blue");
+
+      &.active {
+        color: map-get($colors, "accent-color");
+        border-bottom: 2px solid map-get($colors, "accent-color");
+      }
+    }
+  }
+
   .navbar-toggler {
     color: map-get($colors, "white");
     border-color: map-get($colors, "white");
   }
-  
+
   &__top {
     top: 0;
     right: 14px;
@@ -18,26 +56,38 @@
   .navbar-nav {
     margin-top: 30px;
   }
-  
+
   .nav-item a {
     font-size: map-get($font-sizes, "sm");
     color: map-get($colors, "white");
+    
+    &:hover {
+      color: map-get($colors, "accent-color");
+    }
   }
-  
-  &__contact a,&__address a {
+
+  &__contact a, &__address a {
     font-size: map-get($font-sizes, "sm");
     color: map-get($colors, "white");
+    
+    &:hover {
+      color: map-get($colors, "accent-color");
+    }
   }
   
+
   &__socials i {
     font-size: map-get($font-sizes, "lg");
     color: map-get($colors, "white");
+
+    &:hover {
+      color: map-get($colors, "blue");
+    }
   }
-  
-  
-  
+
+
   &__lang-switcher {
-    
+
     span {
       cursor: pointer;
       font-size: map-get($font-sizes, "fs12");
@@ -46,7 +96,7 @@
       display: inline-block;
       padding: 5px 7px;
     }
-    
+
     input:checked + span {
       background-color: map-get($colors, "accent-color");
     }

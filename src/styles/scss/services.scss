@@ -1,0 +1,25 @@
+@import "./common";
+@import "./components/header";
+@import "./components/section-header";
+@import "./components/services";
+@import "./components/clients";
+@import "./components/footer";
+
+
+.page-services {
+  main .gradient-bg {
+    padding-top: 150px;
+  }
+  
+  .clients {
+    margin-top: 60px;
+  }
+
+  .footer {
+    padding-top: 30px;
+  }
+
+  .footer .container:before {
+    display: none;
+  }
+}
