@@ -52,7 +52,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.section__header-title {
+.tabs__controls-single.active, .section__header-title {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent;
 }
@@ -434,107 +434,89 @@ select {
   line-height: 38px;
 }
 
-.services {
-  padding-bottom: 60px;
-}
-.services .section__header {
+.tabs {
   margin-bottom: 60px;
 }
-.services .row {
-  gap: 60px;
-  justify-content: space-between;
+.tabs__controls {
+  min-width: 439px;
+  max-width: 439px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-.services .col-md-4 {
-  flex: 30%;
-}
-.services__icon {
-  background-color: #fff;
-  padding: 22px;
-  border-radius: 24px;
+.tabs__controls-single {
+  max-width: 375px;
   display: inline-block;
+  font-weight: bold;
+  font-size: 36px;
+  color: #b3b3ba;
+  line-height: 46px;
+  transition: 0.3s color;
+}
+.tabs__controls-single.active {
+  background: -webkit-linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  background: -moz-linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  background: -o-linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+}
+.tabs__controls-single:hover {
+  color: #F0145A;
+}
+.tabs__controls:after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  right: 0;
+}
+.tabs__content {
+  padding-left: 60px;
+}
+.tabs__content-title {
+  font-size: 30px;
+  font-weight: bold;
   margin-bottom: 30px;
 }
-.services__icon img {
-  width: 50px;
-  height: 50px;
-}
-.services__title {
-  margin-bottom: 15px;
-}
-.services__title h6 {
-  font-weight: bold;
-  font-size: 22px;
-  letter-spacing: 1px;
-  color: #24a3ff;
-  margin: 0;
-}
-.services__description {
-  font-size: 16px;
-  line-height: 26px;
+.tabs__content-info {
+  font-size: 19px;
 }
 
+@media (min-width: 1400px) {
+  .tabs .container {
+    max-width: 1080px;
+  }
+}
 @media (max-width: 992px) {
-  .services .row {
-    justify-content: space-evenly;
-  }
-}
-@media (max-width: 576px) {
-  .services .row {
-    flex-direction: column;
-    width: 100%;
-  }
-}
-
-.clients {
-  margin-bottom: 60px;
-}
-.clients .section__header-title {
-  background: #323264;
-}
-.clients .row {
-  overflow: hidden;
-  border-radius: 12px;
-}
-.clients .row > div {
-  transition: 0.3s;
-}
-.clients .row > div:hover {
-  box-shadow: -2px 0 10px rgba(80, 79, 79, 0.67);
-  transform: scale(1.1);
-}
-
-@media (min-width: 1720px) {
-  .clients .container {
-    max-width: 1700px;
-  }
-}
-@media (max-width: 1720px) {
-  .clients .container {
-    max-width: 1400px;
-  }
-}
-@media (max-width: 1400px) {
-  .clients .container {
-    max-width: 1200px;
-  }
-}
-@media (max-width: 1200px) {
-  .clients .container {
-    max-width: 1024px;
-  }
-}
-@media (max-width: 1024px) {
-  .clients .container {
+  .tabs__controls {
+    min-width: 100%;
     max-width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
   }
-  .clients .row {
-    border-radius: 0;
-    overflow: visible;
+  .tabs__controls-single {
+    max-width: 100%;
+    display: flex;
+  }
+  .tabs__controls-single span {
+    width: max-content;
+  }
+  .tabs__controls:after {
+    display: none;
+  }
+  .tabs__content {
+    padding-left: 0;
   }
 }
 @media (max-width: 576px) {
-  .clients img {
-    width: 100%;
+  .tabs__wraper {
+    flex-direction: column;
+  }
+  .tabs__controls {
+    flex-direction: row;
   }
 }
 
@@ -600,56 +582,164 @@ select {
     flex-direction: column;
   }
 }
-.page-services main .gradient-bg {
-  padding-top: 150px;
+.about-us .tabs__controls {
+  padding-left: 34px;
+  gap: 60px;
 }
-.page-services .clients {
-  margin-top: 60px;
-}
-.page-services .navbar-nav .nav-link.active {
-  color: #F0145A;
-  border-bottom: 2px solid #F0145A;
-}
-.page-services .services__title h6 {
-  cursor: pointer;
-  transition: 0.3s all;
-}
-.page-services .services__title h6:hover {
+.about-us .tabs__controls-description {
   color: #F0145A;
 }
-.page-services .footer {
-  padding-top: 30px;
+.about-us .tabs__controls-description i {
+  font-size: 26px;
 }
-.page-services .footer .container:before {
-  display: none;
+.about-us .tabs__controls-description .bi::before, .about-us .tabs__controls-description [class*=" bi-"]::before {
+  vertical-align: 0;
 }
-.page-services .footer__address {
-  transition: 0.3s all;
+.about-us .tabs__controls-text {
+  font-size: 16px;
+  line-height: 19px;
+  color: #323264;
+  font-weight: normal;
 }
-.page-services .footer__address span:hover, .page-services .footer__address a:hover {
+.about-us .tabs__controls:after {
+  left: 0;
+  background-color: #e6e6f0;
+}
+.about-us .tabs__content {
+  padding-left: 0;
+  padding-right: 30px;
+}
+.about-us .tabs__content-title {
+  font-size: 38px;
   color: #F0145A;
 }
-.page-services .footer__contacts {
-  transition: 0.3s all;
+.about-us .tabs__content-info {
+  color: #000000;
 }
-.page-services .footer__contacts a:hover {
-  color: #F0145A;
+.about-us__team {
+  background-image: url("./../../assets/images/team.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+  margin-bottom: 60px;
+}
+.about-us__description {
+  margin-bottom: 60px;
+}
+.about-us__description .col-6 {
+  margin-left: 10px;
+  margin-right: 85px;
+}
+.about-us__description p {
+  max-width: 660px;
+  font-size: 19px;
+  color: #000000;
+}
+.about-us__description h3 {
+  line-height: 46px;
+}
+.about-us__achievements {
+  background-color: #f5f5fa;
+  min-height: 303px;
+  max-height: 303px;
+  padding: 40px 0;
+}
+.about-us__achievements .section__header h3 {
+  font-size: 14px;
+  text-align: center;
+  background: #323264;
+  text-transform: uppercase;
+}
+.about-us__achievements .carousel-item {
+  gap: 32px;
+}
+.about-us__achievements .carousel-indicators [data-bs-target] {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.about-us__achievements .carousel-indicators .active {
+  background-color: #24a3ff;
+}
+.about-us__achievements .carousel-indicators [data-bs-target]:not(.active):hover {
+  background-color: #24a3ff;
+}
+.about-us__achievements .carousel-indicators {
+  bottom: -76px;
+}
+@media (min-width: 1400px) {
+  .about-us .tabs .container, .about-us .about-us__description .container {
+    max-width: 1170px;
+  }
+}
+@media (max-width: 992px) {
+  .about-us .tabs__controls {
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .about-us .tabs__controls:after {
+    display: block;
+  }
+  .about-us .about-us__team {
+    background-size: cover;
+    height: 312px;
+  }
+  .about-us .tabs__wraper {
+    gap: 30px;
+  }
+  .about-us .about-us__description .col-6 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .about-us .about-us__description p {
+    width: 100%;
+  }
+  .about-us__description h3 {
+    min-width: 100%;
+  }
+  .about-us__description .section__header {
+    margin: 0;
+  }
 }
 @media (max-width: 768px) {
-  .page-services main .gradient-bg {
-    padding-top: 180px;
+  .about-us {
+    padding-top: 40px;
+  }
+  .about-us .about-us__team {
+    background-size: cover;
+    height: 234px;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 576px) {
-  .page-services .header .dot-after:after {
+  .about-us {
+    padding-top: 40px;
+  }
+  .about-us .carousel-item {
+    left: 45px;
+  }
+  .about-us .about-us__team {
+    background-size: cover;
+    height: 115px;
+    margin-bottom: 30px;
+  }
+  .about-us .tabs {
+    margin-bottom: 30px;
+  }
+  .about-us .col-6, .about-us .col-5 {
+    width: 100%;
+  }
+  .about-us__achievements-controls {
+    width: 68%;
+    margin: 0 auto;
+  }
+  .about-us__achievements-controls .carousel-control-prev, .about-us__achievements-controls .carousel-control-next {
     display: none;
-  }
-  .page-services .footer {
-    text-align: center;
-  }
-  .page-services .footer ul {
-    justify-content: center;
   }
 }
 
-/*# sourceMappingURL=services.css.map */
+/*# sourceMappingURL=about-us.css.map */

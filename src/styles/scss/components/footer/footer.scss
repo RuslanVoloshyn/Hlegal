@@ -51,4 +51,12 @@
   &__phone a {
     color: map-get($colors, "dark-gray");
   }
+
+  .footer__phone, .footer__email, .footer__address, .footer__social {
+    transition: .3s all;
+
+    a:hover {
+      color: map-get($colors, "accent-color");
+    }
+  }
 }

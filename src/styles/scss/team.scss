@@ -1,0 +1,105 @@
+@import "./common";
+
+@import "./components/header";
+@import "./components/section-header";
+@import "components/footer";
+
+
+.page-team {
+
+  .section__header {
+
+    &-title {
+      margin: 60px auto;
+    }
+  }
+
+
+  .card {
+    position: relative;
+
+    h6 {
+      transition: .3s all;
+
+      &:hover {
+        color: map-get($colors, "accent-color");
+      }
+    }
+   
+
+    p {
+      color: map-get($colors, "gray");
+      font-size: map-get($font-sizes, "xs");
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    bottom: 29px;
+    right: 0;
+    text-align: center;
+    padding: 3px 0 0 3px;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 50%;
+    background-color: map-get($colors, "gray-bg");
+    cursor: pointer;
+
+    i {
+      color: map-get($colors, "blue");
+    }
+  }
+
+  .footer {
+    padding-top: 30px;
+
+    .container:before {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .col-3 {
+      flex: 0 0 auto;
+      width: 30%;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .col-3 {
+      width: 30%;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .col-3 {
+      width: 30%;
+    }
+  }
+  @media (max-width: 992px) {
+    .col-3 {
+      width: 46%;
+    }
+
+  }
+  @media (max-width: 768px) {
+    padding-top: 40px;
+    .section__header-title {
+      margin: 60px 0;
+    }
+    .col-3 {
+      width: 45%;
+    }
+  }
+  @media (max-width: 576px) {
+    padding-top: 40px;
+    .row {
+      justify-content: center;
+    }
+
+    .col-3 {
+      width: 70%;
+    }
+  }
+
+}

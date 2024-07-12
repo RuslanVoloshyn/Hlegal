@@ -52,6 +52,16 @@
     }
     
   }
+  
+  @media (max-width: 576px) {
+
+    &-light {
+      .navbar-toggler {
+        color: map-get($colors, "electric");
+      }
+    }
+    
+  }
 
 
 }

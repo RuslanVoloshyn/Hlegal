@@ -23,6 +23,7 @@
 
     .header__contact a, .header__address a, .header__socials i {
       color: map-get($colors, "gray");
+      transition: .3s;
 
       &:hover {
         color: map-get($colors, "blue");
@@ -35,7 +36,12 @@
 
     .navbar-nav .nav-item .nav-link {
       color: map-get($colors, "blue");
+      transition: .3s;
 
+      &:not(.active):hover {
+        color: map-get($colors, "accent-color");
+      }
+      
       &.active {
         color: map-get($colors, "accent-color");
         border-bottom: 2px solid map-get($colors, "accent-color");

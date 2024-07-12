@@ -287,6 +287,7 @@ select {
 }
 .header.header-light .header__contact a, .header.header-light .header__address a, .header.header-light .header__socials i {
   color: #b3b3ba;
+  transition: 0.3s;
 }
 .header.header-light .header__contact a:hover, .header.header-light .header__address a:hover, .header.header-light .header__socials i:hover {
   color: #24a3ff;
@@ -296,6 +297,10 @@ select {
 }
 .header.header-light .navbar-nav .nav-item .nav-link {
   color: #24a3ff;
+  transition: 0.3s;
+}
+.header.header-light .navbar-nav .nav-item .nav-link:not(.active):hover {
+  color: #F0145A;
 }
 .header.header-light .navbar-nav .nav-item .nav-link.active {
   color: #F0145A;
@@ -392,6 +397,11 @@ select {
     padding: 10px;
   }
 }
+@media (max-width: 576px) {
+  .header-light .navbar-toggler {
+    color: #323264;
+  }
+}
 
 .section__header {
   margin-bottom: 30px;
@@ -456,6 +466,10 @@ select {
   line-height: 19px;
   color: #24a3ff;
   margin-bottom: 15px;
+  transition: 0.3s;
+}
+.publication__title:hover {
+  color: #F0145A;
 }
 .publication__date {
   font-size: 12px;
@@ -517,6 +531,71 @@ select {
 }
 .footer__phone a {
   color: #46466E;
+}
+.footer .footer__phone, .footer .footer__email, .footer .footer__address, .footer .footer__social {
+  transition: 0.3s all;
+}
+.footer .footer__phone a:hover, .footer .footer__email a:hover, .footer .footer__address a:hover, .footer .footer__social a:hover {
+  color: #F0145A;
+}
+
+@media (max-width: 576px) {
+  .dot-after:after {
+    display: none;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer ul {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+.page-publications .header__menu {
+  z-index: 1;
+}
+.page-publications__btn {
+  min-width: 233px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e6e6f0;
+  padding: 3px;
+  border-radius: 12px;
+}
+.page-publications__btn a {
+  border-color: #e6e6f0;
+  color: #323264;
+  border-radius: 12px !important;
+}
+.page-publications__btn a:hover {
+  background-color: #f5f5fa;
+  color: #323264;
+}
+.page-publications__btn .btn.active {
+  color: #323264;
+  background-color: #fff;
+  border-color: #fff;
+}
+.page-publications__controls {
+  width: 211px;
+  margin: 0 auto;
+}
+.page-publications__controls .btn-primary {
+  font-size: 16px;
+  padding: 18px 30px;
+}
+@media (max-width: 576px) {
+  .page-publications .card {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .page-publications {
+    padding-top: 40px;
+  }
+  .page-publications .header.header-light {
+    margin-bottom: 60px;
+  }
 }
 
 /*# sourceMappingURL=publications.css.map */

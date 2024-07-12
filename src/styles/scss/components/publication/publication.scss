@@ -35,6 +35,11 @@
     line-height: map-get($font-sizes, "md");
     color: map-get($colors, "blue");
     margin-bottom: 15px;
+    transition: .3s;
+    
+    &:hover {
+      color: map-get($colors, "accent-color");
+    }
   }
 
   &__date {
