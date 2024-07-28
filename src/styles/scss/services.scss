@@ -1,0 +1,77 @@
+@import "./common";
+@import "./components/header";
+@import "./components/section-header";
+@import "./components/services";
+@import "./components/clients";
+@import "./components/footer";
+
+
+.page-services {
+  main .gradient-bg {
+    padding-top: 150px;
+  }
+
+  .clients {
+    margin-top: 60px;
+  }
+
+  .navbar-nav .nav-link.active {
+    color: map-get($colors, "accent-color");
+    border-bottom: 2px solid map-get($colors, "accent-color");
+  }
+
+  .services__title h6 {
+    cursor: pointer;
+    transition: .3s all;
+
+    &:hover {
+      color: map-get($colors, "accent-color");
+    }
+  }
+
+  .footer {
+    padding-top: 30px;
+  }
+
+  .footer .container:before {
+    display: none;
+  }
+
+  .footer__address {
+    transition: .3s all;
+
+    span:hover, a:hover {
+      color: map-get($colors, "accent-color");
+    }
+  }
+
+  .footer__contacts {
+    transition: .3s all;
+
+    a:hover {
+      color: map-get($colors, "accent-color");
+    }
+  }
+
+  @media (max-width: 768px) {
+    main .gradient-bg {
+      padding-top: 180px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .header {
+      .dot-after:after {
+        display: none;
+      }
+    }
+
+    .footer {
+      text-align: center;
+
+      ul {
+        justify-content: center;
+      }
+    }
+  }
+}

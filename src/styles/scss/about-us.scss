@@ -1,0 +1,221 @@
+@import "./common";
+
+@import "./components/header";
+@import "./components/section-header";
+@import "./components/tabs";
+@import "components/footer";
+
+.about-us {
+
+
+  .tabs__controls {
+    padding-left: 34px;
+    gap: 60px;
+
+    &-description {
+      color: map-get($colors, "accent-color");
+
+      i {
+        font-size: map-get($font-sizes, "fs26");
+      }
+
+      .bi::before, [class*=" bi-"]::before {
+        vertical-align: 0;
+      }
+    }
+
+    &-info {
+    }
+
+    &-text {
+      font-size: map-get($font-sizes, "sm");
+      line-height: map-get($font-sizes, "md");
+      color: map-get($colors, "electric");
+      font-weight: normal;
+    }
+  }
+
+  .tabs__controls:after {
+    left: 0;
+    background-color: map-get($colors, "light-gray");
+  }
+
+  .tabs__content {
+    padding-left: 0;
+    padding-right: 30px;
+
+    &-title {
+      font-size: map-get($font-sizes, "xxl");
+      color: map-get($colors, "accent-color");
+    }
+
+    &-info {
+      color: map-get($colors, "text-color");
+    }
+  }
+
+  &__team {
+    background-image: url($base-assets-path + "images/team.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 450px;
+    margin-bottom: 60px;
+  }
+
+  &__description {
+    margin-bottom: 60px;
+
+    .col-6 {
+      margin-left: 10px;
+      margin-right: 85px;
+    }
+
+    p {
+      max-width: 660px;
+      font-size: map-get($font-sizes, "md");
+      color: map-get($colors, "text-color");
+    }
+
+    h3 {
+      line-height: 46px;
+    }
+  }
+
+  &__achievements {
+    background-color: map-get($colors, "gray-bg");
+    min-height: 303px;
+    max-height: 303px;
+    padding: 40px 0;
+
+    .section__header {
+      h3 {
+        font-size: map-get($font-sizes, "xs");
+        text-align: center;
+        background: map-get($colors, "electric");
+        text-transform: uppercase;
+      }
+    }
+
+    .carousel-item {
+      gap: 32px;
+    }
+
+
+    .carousel-indicators [data-bs-target] {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+
+    .carousel-indicators .active {
+      background-color: map-get($colors, "blue");
+    }
+
+    .carousel-indicators [data-bs-target]:not(.active):hover {
+      background-color: map-get($colors, "blue");
+    }
+
+    .carousel-indicators {
+      bottom: -76px;
+    }
+
+
+  }
+
+  @media (min-width: 1400px) {
+    .tabs, .about-us__description {
+      .container {
+        max-width: 1170px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .tabs__controls {
+      flex-wrap: wrap;
+      gap: 40px;
+      margin: 0;
+      padding-bottom: 0;
+
+      &:after {
+        display: block;
+      }
+    }
+
+    .about-us__team {
+      background-size: cover;
+      height: 312px;
+    }
+
+    .tabs__wraper {
+      gap: 30px;
+    }
+
+    .about-us__description {
+
+      .col-6 {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+
+    &__description {
+
+      h3 {
+        min-width: 100%;
+      }
+
+      .section__header {
+        margin: 0;
+      }
+
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 40px;
+
+    .about-us__team {
+      background-size: cover;
+      height: 234px;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding-top: 40px;
+    .carousel-item {
+      left: 45px;
+    }
+
+    .about-us__team {
+      background-size: cover;
+      height: 115px;
+      margin-bottom: 30px;
+    }
+
+    .tabs {
+      margin-bottom: 30px;
+    }
+
+    .col-6, .col-5 {
+      width: 100%;
+    }
+
+    &__achievements-controls {
+      width: 68%;
+      margin: 0 auto;
+
+      .carousel-control-prev, .carousel-control-next {
+        display: none;
+      }
+    }
+  }
+
+}

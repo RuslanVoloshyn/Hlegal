@@ -1,0 +1,55 @@
+.team {
+  $min-height: 300px;
+  $photo-width: 400px;
+  
+  padding-top: 60px;
+  margin-bottom: 105px;
+  
+  &__member {
+    min-height: $min-height;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: map-get($colors, "gray-bg");
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  &__photo {
+    width: $photo-width;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: $min-height;
+  }
+  
+  &__text {
+    width: calc(100% - $photo-width);
+    padding: 30px;
+  }
+  
+  &__info, &__role {
+    color: map-get($colors, "gray");
+    font-size: map-get($font-sizes, "xs");
+  }
+
+  &__info {
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  .carousel-indicators {
+    margin: 0;
+    bottom: -45px;
+  }
+
+  .carousel-indicators [data-bs-target] {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(map-get($colors, "blue"), 0.5);
+    
+    &.active {
+      background-color: map-get($colors, "blue");
+    }
+  }
+}

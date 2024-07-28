@@ -1,0 +1,46 @@
+@use "sass:map";
+
+body {
+  font-family: $main-font-family;
+  font-size: map-get($font-sizes, "md");
+  color: map-get($colors, "white");
+  position: relative;
+}
+
+.gradient-bg {
+  background: map-get($colors, "supersoft-accent-gradient");
+  border-radius: 0 0 12px 12px;
+  position: relative;
+  margin-bottom: 20px;
+  
+  &:before, &:after {
+    content: "";
+    display: inline-block;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    border-radius: 0 0 12px 12px;
+  }
+  
+  &:before {
+    background-color: #cacadb;
+    width: calc(100% - 40px );
+    bottom: -10px;
+  }
+  
+  &:after {
+    background-color: #e7e7f2;
+    width: calc(100% - 80px );
+    bottom: -20px;
+  }
+}
+
+.dot-after:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}

@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile-home": "sass --watch ./src/styles/scss/home-page.scss:./src/styles/css/home-page.css",
+    "compile-services": "sass --watch ./src/styles/scss/services.scss:./src/styles/css/services.css",
+    "compile-publications": "sass --watch ./src/styles/scss/publications.scss:./src/styles/css/publications.css",
+    "compile-contact": "sass --watch ./src/styles/scss/contact.scss:./src/styles/css/contact.css",
+    "compile-team": "sass --watch ./src/styles/scss/team.scss:./src/styles/css/team.css",
+    "compile-about-us": "sass --watch ./src/styles/scss/about-us.scss:./src/styles/css/about-us.css"
   },
   "repository": {
     "type": "git",

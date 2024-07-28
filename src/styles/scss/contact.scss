@@ -1,0 +1,90 @@
+@import "./common";
+
+@import "./components/header";
+@import "./components/section-header";
+@import "components/footer";
+
+
+.page-contact {
+  &__address div {
+    color: map-get($colors, "electric");
+  }
+
+  &__address, &__company {
+    font-size: map-get($font-sizes, "lg");
+  }
+
+  hr {
+    border: 4px solid map-get($colors, "light-gray");
+    opacity: 1;
+  }
+
+  &__company {
+    flex-direction: column;
+    gap: 15px;
+
+    &-phone a {
+      color: map-get($colors, "electric");
+    }
+  }
+
+  &__social {
+    gap: 11px;
+    align-items: center;
+    transition: .3s all;
+
+    i {
+      font-size: map-get($font-sizes, "xxl");
+    }
+
+    span {
+      color: map-get($colors, "electric");
+      font-size: map-get($font-sizes, 'fs12');
+      text-transform: uppercase;
+      display: flex;
+    }
+
+    &:hover {
+      color: map-get($colors, "accent-color");
+
+      span {
+        color: map-get($colors, "accent-color");
+      }
+    }
+  }
+
+  &__form {
+    background-color: map-get($colors, "gray-bg");
+
+    label {
+      width: 100%;
+
+      &placeholder {
+        color: map-get($colors, "gray");
+      }
+    }
+
+
+    h5 {
+      color: map-get($colors, "gray");
+      margin-bottom: 15px;
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  .footer {
+    padding-top: 30px;
+
+    .container:before {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    padding-top: 40px;
+  }
+
+}
